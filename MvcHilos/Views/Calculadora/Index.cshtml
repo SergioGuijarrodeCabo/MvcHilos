@@ -1,0 +1,36 @@
+﻿@model ListaNumeros
+<h2>Calculadora</h2>
+
+
+<form method="post">
+    <h2>Introduzca un número</h2>
+    <input type="number" name="num1" />
+   
+    <button type="submit">Operar</button>
+</form>
+
+@if(Model!=null){
+
+
+    <div class="container">
+        <div class="row">
+
+     <div class ="col-md-6">
+                <h2>Potencias</h2>
+            @for(int i = 0; i < Model.Potencias.Count; i++)
+            {
+                <h2> @ViewData["NUMERO"] ^ @i = @Model.Potencias[i] </h2>
+            }
+     </div>
+
+      <div class="col-md-6">
+            <h2>Múltiplos</h2>
+            @for (int i = 0; i < Model.Multiplos.Count; i++)
+            {
+                        <h2> @ViewData["NUMERO"] X @i = @Model.Multiplos[i] </h2>
+            }
+       </div>
+
+    </div>
+    </div>
+}
