@@ -17,7 +17,7 @@
 
      <div class ="col-md-6">
                 <h2>Potencias</h2>
-            @for(int i = 0; i < Model.Potencias.Count; i++)
+            @for(int i = 0; i <= Model.Potencias.Count; i++)
             {
                 <h2> @ViewData["NUMERO"] ^ @i = @Model.Potencias[i] </h2>
             }
